@@ -1,0 +1,206 @@
+<style>
+body 
+{
+  font-family:Arial; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
+
+h2{
+    text-align: center;
+}
+
+.roomDetails 		/*div tag including image, description, price, cart*/
+{
+	margin-left:20px;
+	margin-right:20px;
+	border:2px solid black;
+}
+
+.roomImage			/*room image*/
+{
+	margin-left:22px;
+	margin-right:22px;
+	width:280px;
+	height:280px;
+	margin-top:15px;
+}
+
+
+.roomDescription		/*room description*/
+{
+	margin-left:22px;
+	margin-right:22px;
+	font-size:15px;
+	font-family:trebuchet ms;
+	color:black;
+	text-align:justify;
+}
+
+
+#book 			/*table used for the booking*/
+{
+	margin-left:0px;
+	margin-bottom:10px;
+}
+
+#bookRoom 					/*cart icon*/
+{
+	background:url("Images/cart.png");
+	height:40px;
+	width:40px;
+	border:0px;
+	cursor:pointer;
+	background-color:transparent;
+	background-size:cover;
+}
+
+#cart:hover
+{
+	background-image:url("Images/after cart.png");
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    
+.buttonBook {
+    background-color: #e7e7e7; color: black;
+} 
+
+.buttonCancel {
+    background-color: #555555;
+}
+
+
+</style>
+
+
+<h2> List of Meeting Rooms </h2>
+<table width="100%">
+    <tr>
+        <td>
+            <div class="roomDetails">		<!--Room 1-->
+                <img src="/images/Room1.jpg" class="roomImage">
+                <p class="roomDescription">2nd floor <br>Limitation 15 members</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+
+        <td>
+            <div class="roomDetails">		<!--Room 2-->
+                <img src="/images/Room2.jpg" class="roomImage">
+                <p class="roomDescription">.............</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+
+        <td>
+            <div class="roomDetails">		<!--Room 3-->
+                <img src="/images/Room3.jpg" class="roomImage">
+                <p class="roomDescription">.............</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+   
+        <td>
+            <div class="roomDetails">		<!--Room 4-->
+                <img src="/images/Room4.jpg" class="roomImage">
+                <p class="roomDescription">.............</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+</tr>
+<tr>
+    <td>
+        <div class="roomDetails">		<!--Room 5-->
+            <img src="/images/Room5.jpg" class="roomImage">
+            <p class="roomDescription">.............</p>
+            <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+            <table id="book">
+                <tr>
+                    <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                </tr>
+            </table>
+        </div>
+    </td>
+
+        <td>
+            <div class="roomDetails">		<!--Room 6-->
+                <img src="/images/Room6.jpg" class="roomImage">
+                <p class="roomDescription">.............</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+
+        <td>
+            <div class="roomDetails">		<!--Room 7-->
+                <img src="/images/Room7.jpg" class="roomImage">
+                <p class="roomDescription">.............</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+
+        <td>
+            <div class="roomDetails">		<!--Room 8-->
+                <img src="/images/Room8.jpg" class="roomImage">
+                <p class="roomDescription">.............</p>
+                <button class="button buttonBook">Book</button>
+                <button class="button buttonCancel">Cancel</button>
+                <table id="book">
+                    <tr>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+</tr>
+</table>
+
