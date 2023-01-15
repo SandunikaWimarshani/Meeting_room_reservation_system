@@ -1,5 +1,5 @@
 <style>
-body 
+body                      
 {
   font-family:Arial; 
   background: -webkit-linear-gradient(to right, #155799, #159957); 
@@ -11,7 +11,7 @@ h2{
     text-align: center;
 }
 
-.roomDetails 		/*div tag including image, description, price, cart*/
+.roomDetails 		/*div tag including room image and description*/
 {
 	margin-left:20px;
 	margin-right:20px;
@@ -21,10 +21,11 @@ h2{
 .roomImage			/*room image*/
 {
 	margin-left:22px;
-	margin-right:22px;
+	margin-right:20px;
 	width:280px;
 	height:280px;
 	margin-top:15px;
+    
 }
 
 
@@ -45,7 +46,7 @@ h2{
 	margin-bottom:10px;
 }
 
-#bookRoom 					/*cart icon*/
+#bookRoom 					/*book button*/
 {
 	background:url("Images/cart.png");
 	height:40px;
@@ -56,30 +57,20 @@ h2{
 	background-size:cover;
 }
 
-#cart:hover
-{
-	background-image:url("Images/after cart.png");
-}
-
-.button {
-  background-color: #4CAF50; /* Green */
+.btn {
   border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  padding: 14px 28px;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
 }
-    
-.buttonBook {
-    background-color: #e7e7e7; color: black;
-} 
 
-.buttonCancel {
-    background-color: #555555;
+.form {
+    background-color: darkslategrey;
+    width: 100%;
+} 
+.form:hover {
+    background-color: gray;
 }
 
 
@@ -92,12 +83,11 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 1-->
                 <img src="/images/Room1.jpg" class="roomImage">
-                <p class="roomDescription">2nd floor <br>Limitation 15 members</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
-                <table id="book">
+                <p class="roomDescription"><b>Room 01</b> <br> Location: Bulding A1 <br> Capasity:30 persons</p>
+
+            <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
@@ -106,12 +96,11 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 2-->
                 <img src="/images/Room2.jpg" class="roomImage">
-                <p class="roomDescription">.............</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+                <p class="roomDescription"><b>Room 02</b> <br> Location: Bulding A2 <br> Capasity:15 persons</p>
+               
                 <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
@@ -120,12 +109,11 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 3-->
                 <img src="/images/Room3.jpg" class="roomImage">
-                <p class="roomDescription">.............</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+                <p class="roomDescription"><b>Room 03</b> <br> Location: Bulding A3 <br> Capasity:60 persons</p>
+                
                 <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
@@ -134,12 +122,11 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 4-->
                 <img src="/images/Room4.jpg" class="roomImage">
-                <p class="roomDescription">.............</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+                <p class="roomDescription"><b>Room 04</b> <br> Location: Bulding A4 <br> Capasity:85 persons</p>
+                
                 <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
@@ -149,12 +136,11 @@ h2{
     <td>
         <div class="roomDetails">		<!--Room 5-->
             <img src="/images/Room5.jpg" class="roomImage">
-            <p class="roomDescription">.............</p>
-            <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+            <p class="roomDescription"><b>Room 05</b> <br> Location: Bulding A5 <br> Capasity:40 persons</p>
+           
             <table id="book">
                 <tr>
-                    <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                    <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                 </tr>
             </table>
         </div>
@@ -163,12 +149,11 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 6-->
                 <img src="/images/Room6.jpg" class="roomImage">
-                <p class="roomDescription">.............</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+                <p class="roomDescription"><b>Room 06</b> <br> Location: Bulding A6 <br> Capasity:10 persons</p>
+                
                 <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
@@ -177,12 +162,11 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 7-->
                 <img src="/images/Room7.jpg" class="roomImage">
-                <p class="roomDescription">.............</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+                <p class="roomDescription"><b>Room 07</b> <br> Location: Bulding A7 <br> Capasity:20 persons</p>
+                
                 <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
@@ -191,16 +175,18 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 8-->
                 <img src="/images/Room8.jpg" class="roomImage">
-                <p class="roomDescription">.............</p>
-                <button class="button buttonBook">Book</button>
-                <button class="button buttonCancel">Cancel</button>
+                <p class="roomDescription"><b>Room 08</b> <br> Location: Bulding A1 <br> Capasity:15 persons</p>
+               
                 <table id="book">
                     <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom" name="sendpcode" value="10101"></button></td>
+                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
                     </tr>
                 </table>
             </div>
         </td>
 </tr>
 </table>
-
+<br>
+<form method="get" action="/form/form">
+    <button class="btn form">Book</button>
+</form>

@@ -5,9 +5,12 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 
+
 const indexRouter =require('./routes/index')
-const loginRouter =require('./routes/login')
+const adminloginRouter =require('./routes/adminlogin')
+const userloginRouter =require('./routes/userlogin')
 const viewRouter =require('./routes/view')
+const formRouter = require('./routes/form')
 const bookRouter =require('./routes/book')
 const logoutRouter =require('./routes/logout')
 
@@ -27,11 +30,12 @@ db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))
 
 app.use('/', indexRouter)
-app.use('/login', loginRouter)
+app.use('/adminlogin', adminloginRouter)
+app.use('/userlogin', userloginRouter)
 app.use('/view', viewRouter)
+app.use('/form', formRouter)
 app.use('/book', bookRouter)
-app.use('/logout', logoutRouter)
-
+app.use('/logout',logoutRouter)
 
 app.listen(3000, () => console.log('Server started at 3000'));
 
