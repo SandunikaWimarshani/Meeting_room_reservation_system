@@ -6,12 +6,25 @@
       background: linear-gradient(to right, #155799, #159957); 
       color:whitesmoke;
     }
-    
-    h2{
-        text-align: center;
-    }
-    
-    
+  
+  
+  .form-head .title-text
+  
+  {
+    display: flex;
+    width: 200%;
+  }
+  
+  .form-head .title
+  {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+    margin-top: 25px;
+  }
+  
     form{
         width:35rem;
         margin: auto;
@@ -59,12 +72,13 @@
     form{
         width:35rem;
         margin: auto;
-        color:whitesmoke;
+        color: black;
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);
-        background-color: rgba(11, 15, 13, 0.582);
+        background-color: whitesmoke;
         border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.125);
+        border: 1px solid lightgrey;
+        
       }
     
     .headInput{
@@ -76,12 +90,18 @@
     
     
     </style>
-    <br><br> <br> <br> <br> 
+    <br><br> <br>  
    
-    <h2> Sign In </h2>
+    
     
     <form action="/adminlogin/adminlogin" method="post"> 
-    
+      <div class="form-head">
+        <div class="title-text">
+           <div class="title login">
+              Sign In
+           </div>
+           </div>
+           </div><br><br>
         <!-- Main container for all inputs -->
         <div class="mainInput">
             <!-- Username -->

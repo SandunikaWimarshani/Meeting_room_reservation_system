@@ -1,14 +1,32 @@
 <style>
-    body 
-    {
-      font-family:Arial; 
-      background: -webkit-linear-gradient(to right, #155799, #159957); 
-      background: linear-gradient(to right, #155799, #159957); 
-      color:whitesmoke;
+body 
+{
+  font-family:Arial; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
       
-    }
+}
     
+.button 
+{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
+button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  border: 2px solid white;
+}
 </style>
     
   <table border=0 width="100%" id="reservationTable">
@@ -29,3 +47,17 @@
     </tr>
 </table>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<table id="change">
+  <tr>
+      <form method="get" action="/form/form">
+          <button class="button edit">Edit</button>
+        </form>
+  </tr>
+    <tr>
+        <form method="get" action="/delete/delete">
+            <button class="button delete">Delete</button>
+          </form>
+    </tr>
+
+</table>

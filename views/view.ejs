@@ -57,12 +57,16 @@ h2{
 	background-size:cover;
 }
 
-.btn {
+.button {
+  background-color: black;
   border: none;
   color: white;
-  padding: 14px 28px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
 }
 
@@ -77,6 +81,22 @@ h2{
     border: 2px solid white;
 }
 
+.roomDetails:hover{
+    background-color: rgb(51, 103, 103);
+}
+  
+#selectBook 			
+{
+	margin-left:0px;
+	margin-bottom:10px;
+}
+button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+
 
 </style>
 
@@ -88,6 +108,13 @@ h2{
             <div class="roomDetails">		<!--Room 1-->
                 <img src="/images/Room1.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 01</b> <br> Location: Bulding A1-section 1<br> Capasity:30 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
 
@@ -95,6 +122,13 @@ h2{
             <div class="roomDetails">		<!--Room 2-->
                 <img src="/images/Room2.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 02</b> <br> Location: Bulding A1-section 2 <br> Capasity:15 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
 
@@ -102,6 +136,13 @@ h2{
             <div class="roomDetails">		<!--Room 3-->
                 <img src="/images/Room3.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 03</b> <br> Location: Bulding A2-section 1 <br> Capasity:60 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
    
@@ -109,6 +150,13 @@ h2{
             <div class="roomDetails">		<!--Room 4-->
                 <img src="/images/Room4.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 04</b> <br> Location: Bulding A2-section 2 <br> Capasity:85 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
 </tr>
@@ -117,6 +165,13 @@ h2{
         <div class="roomDetails">		<!--Room 5-->
             <img src="/images/Room5.jpg" class="roomImage">
             <p class="roomDescription"><b>Room No 05</b> <br> Location: Bulding A3-section 1 <br> Capasity:40 person</p>
+            <table id="selectBook">
+                <tr>
+                    <form method="get" action="/form/form">
+                        <button class="button select">Select</button>
+                      </form>
+                </tr>
+            </table>
         </div>
     </td>
 
@@ -124,6 +179,13 @@ h2{
             <div class="roomDetails">		<!--Room 6-->
                 <img src="/images/Room6.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 06</b> <br> Location: Bulding A3-section 2 <br> Capasity:10 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
 
@@ -131,6 +193,13 @@ h2{
             <div class="roomDetails">		<!--Room 7-->
                 <img src="/images/Room7.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 07</b> <br> Location: Bulding A4-section 1 <br> Capasity:20 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
 
@@ -138,11 +207,18 @@ h2{
             <div class="roomDetails">		<!--Room 8-->
                 <img src="/images/Room8.jpg" class="roomImage">
                 <p class="roomDescription"><b>Room No 08</b> <br> Location: Bulding A4-section 2 <br> Capasity:15 person</p>
+                <table id="selectBook">
+                    <tr>
+                        <form method="get" action="/form/form">
+                            <button class="button select">Select</button>
+                          </form>
+                    </tr>
+                </table>
             </div>
         </td>
 </tr>
 </table>
-<br>
-<form method="get" action="/form/form">
-    <button class="btn form">Choose a Room</button>
-</form>
+
+
+
+    
