@@ -19,12 +19,12 @@ form{
   
 }
 
-div.element {
+div.ele {
   margin: 20px 0;
   text-align: left;
 }
 
-div.element.inlined {
+div.ele.inlined {
   width: 49%;
   display: inline-block;
   margin-left: 1%;
@@ -53,13 +53,15 @@ button {
   border: none;
   color: white;
   font-size: 1.25em;
-  font-family: 'Nanum Gothic';
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 4px;
   cursor: pointer;
   text-align: right;
 }
 
 button:hover {
+  opacity: 0.6;
+  cursor: pointer;
   border: 2px solid white;
 }
 
@@ -71,24 +73,24 @@ button:hover {
 </style>
 <h2><b>New Reservation </b> </h3>
 <form action="view.ejs" method="post">
-  <div class="element">
+  <div class="ele">
     <label for="name">Room NO</label>
-    <input type="number" id="" name="emp_name" placeholder="Enter selected room no" min="1" max="8" required>
+    <input type="number" id="" name="room_no" placeholder="Enter selected room no" min="1" max="8" required>
   </div>
-  <div class="element">
+  <div class="ele">
     <label for="name">Your Name</label>
-    <input type="text" id="name" name="emp_name" placeholder="Enter your name" pattern=[A-Z\sa-z]{3,20} required>
+    <input type="text" id="name" name="emp_name" placeholder="Enter your name" required>
   </div>
-  <div class="element">
+  <div class="ele">
     <label for="email">Your E-mail</label>
     <input type="email" id="email" name="emp_email" placeholder="Enter your email" required>
   </div>
-  <div class="element">
+  <div class="ele">
     <label for="phone">Your Phone</label>
-    <input type="tel" id="phone" name="emp_phone" placeholder="Enter your phone" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    <input type="tel" id="phone" name="emp_phone" placeholder="Enter your phone" required>
   </div>
   
-  <div class="element inlined">
+  <div class="ele inlined">
     <label for="date">Date</label>
     <input type="date" id="date" name="date" required>
   </div>
@@ -96,10 +98,10 @@ button:hover {
   <div>
           <form>
               <label for="start-time">Start Time</label>
-              <input type="time" id="start-time">
-
+              <input type="time" id="start-time" name="st_time">
+              <br><br>
               <label for="end-time">End Time</label>
-              <input type="time" id="end-time">
+              <input type="time" id="end-time" name="end_time">
          </form>
        </div>
        <br>
@@ -113,24 +115,5 @@ button:hover {
 </form>
 
 
-<script>
-var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
 
-if(date < 10) {
-  date = '0' + date;
-}
-if(month < 10) {
-  month = '0' + month;
-}
-
-var dateTomorrow = year + "-" + month + "-" + date;
-var dateElem = document.querySelector("#date");
-
-
-dateElem.setAttribute("min", dateTomorrow);
-
-</script
 

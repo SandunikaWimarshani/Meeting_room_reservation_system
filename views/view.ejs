@@ -61,16 +61,20 @@ h2{
   border: none;
   color: white;
   padding: 14px 28px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
   cursor: pointer;
 }
 
 .form {
-    background-color: darkslategrey;
+    background-color: black;
     width: 100%;
 } 
+
 .form:hover {
-    background-color: gray;
+    opacity: 0.6;
+    cursor: pointer;
+    border: 2px solid white;
 }
 
 
@@ -83,52 +87,28 @@ h2{
         <td>
             <div class="roomDetails">		<!--Room 1-->
                 <img src="/images/Room1.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 01</b> <br> Location: Bulding A1 <br> Capasity:30 persons</p>
-
-            <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 01</b> <br> Location: Bulding A1-section 1<br> Capasity:30 person</p>
             </div>
         </td>
 
         <td>
             <div class="roomDetails">		<!--Room 2-->
                 <img src="/images/Room2.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 02</b> <br> Location: Bulding A2 <br> Capasity:15 persons</p>
-               
-                <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 02</b> <br> Location: Bulding A1-section 2 <br> Capasity:15 person</p>
             </div>
         </td>
 
         <td>
             <div class="roomDetails">		<!--Room 3-->
                 <img src="/images/Room3.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 03</b> <br> Location: Bulding A3 <br> Capasity:60 persons</p>
-                
-                <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 03</b> <br> Location: Bulding A2-section 1 <br> Capasity:60 person</p>
             </div>
         </td>
    
         <td>
             <div class="roomDetails">		<!--Room 4-->
                 <img src="/images/Room4.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 04</b> <br> Location: Bulding A4 <br> Capasity:85 persons</p>
-                
-                <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 04</b> <br> Location: Bulding A2-section 2 <br> Capasity:85 person</p>
             </div>
         </td>
 </tr>
@@ -136,57 +116,33 @@ h2{
     <td>
         <div class="roomDetails">		<!--Room 5-->
             <img src="/images/Room5.jpg" class="roomImage">
-            <p class="roomDescription"><b>Room 05</b> <br> Location: Bulding A5 <br> Capasity:40 persons</p>
-           
-            <table id="book">
-                <tr>
-                    <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                </tr>
-            </table>
+            <p class="roomDescription"><b>Room No 05</b> <br> Location: Bulding A3-section 1 <br> Capasity:40 person</p>
         </div>
     </td>
 
         <td>
             <div class="roomDetails">		<!--Room 6-->
                 <img src="/images/Room6.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 06</b> <br> Location: Bulding A6 <br> Capasity:10 persons</p>
-                
-                <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 06</b> <br> Location: Bulding A3-section 2 <br> Capasity:10 person</p>
             </div>
         </td>
 
         <td>
             <div class="roomDetails">		<!--Room 7-->
                 <img src="/images/Room7.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 07</b> <br> Location: Bulding A7 <br> Capasity:20 persons</p>
-                
-                <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 07</b> <br> Location: Bulding A4-section 1 <br> Capasity:20 person</p>
             </div>
         </td>
 
         <td>
             <div class="roomDetails">		<!--Room 8-->
                 <img src="/images/Room8.jpg" class="roomImage">
-                <p class="roomDescription"><b>Room 08</b> <br> Location: Bulding A1 <br> Capasity:15 persons</p>
-               
-                <table id="book">
-                    <tr>
-                        <td width="225px" align="right"><button type="booking" id="bookRoom"></button></td>
-                    </tr>
-                </table>
+                <p class="roomDescription"><b>Room No 08</b> <br> Location: Bulding A4-section 2 <br> Capasity:15 person</p>
             </div>
         </td>
 </tr>
 </table>
 <br>
 <form method="get" action="/form/form">
-    <button class="btn form">Book</button>
+    <button class="btn form">Choose a Room</button>
 </form>
