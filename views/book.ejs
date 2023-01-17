@@ -8,56 +8,26 @@ body
       
 }
     
-.button 
-{
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
-
-button:hover {
-  opacity: 0.6;
-  cursor: pointer;
-  border: 2px solid white;
+th, td {
+  padding: 5px;
+  text-align: left;
 }
 </style>
-    
-  <table border=0 width="100%" id="reservationTable">
-    <tr style="height:120px;"></tr>
-    <tr>
-      <td colspan=6 class="cartHeads" style="font-size:30px; text-align:left;">Reservation Details</td>
-    </tr>
-    
-    <tr>
-      <td></td>
-      <td class="reservedetails" width="10%">NO</td>
-      <td class="reservedetails" style="text-align:left;" width="40%">Employee Name</td>
-      <td class="reservedetails" width="10%">Room Number</td>
-      <td class="reservedetails" width="10%">Date</td>
-      <td class="reservedetails" width="10%">Start Time</td>
-      <td class="reservedetails" width="10%">End Time</td>
-      <td class="reservedetails" width="10%">Status</td>
-    </tr>
-</table>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<table id="change">
+<h2>Reservation Details</h2>
+
+<table style="width:100%">
   <tr>
-      <form method="get" action="/form/form">
-          <button class="button edit">Edit</button>
-        </form>
+    <th>Room No</th>
+    <th>Employee Name</th>
+    <th>Employee Email</th>
+    <th>Employee Phone</th>
+    <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
   </tr>
-    <tr>
-        <form method="get" action="/delete/delete">
-            <button class="button delete">Delete</button>
-          </form>
-    </tr>
-
 </table>

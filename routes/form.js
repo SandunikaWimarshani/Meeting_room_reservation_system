@@ -20,9 +20,9 @@ router.post('/form', function(req, res){
     }), function(err, msg){
         if(err){
             console.log(err)
-            res.render('./book', {messeage:err})
+            res.render('./form', {messeage:err})
         }else{
-            res.render('./form', {messeage:"Reservation Complete"})
+            res.redirect('/book/book')
         }
     }
    )
