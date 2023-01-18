@@ -9,7 +9,7 @@ router.get('/adminlogin', (req, res) => {
 
 router.post('/adminlogin', (req, res) => {
     if(req.body.username == "admin" && req.body.pswd == "admin123"){
-        res.render('./book')
+        res.redirect('/book/book')
 
     }else{
         res.render('./adminlogin', {message: "Error.. Invalid Sign In"})

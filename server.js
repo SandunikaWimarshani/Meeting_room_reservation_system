@@ -6,10 +6,14 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 const Book = require('./models/reservation')
+const cors = require('cors')
+const methodoverride = require('method-override')
+
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
+app.use(methodoverride("_method"))
 
 
 const indexRouter =require('./routes/index')
