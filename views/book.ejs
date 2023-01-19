@@ -1,3 +1,10 @@
+<% var message; if(message){%>
+  <div class="alert alert success" role="alert">
+    <%= message %> 
+  </div>
+<% } %> 
+
+
 <style>
 body 
 {
@@ -14,7 +21,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;
+  text-align: center;
 }
 
 .button {
@@ -35,21 +42,40 @@ button:hover {
   cursor: pointer;
   border: 2px solid white;
 }
+
+
 </style>
 
 <h2>Reservation Details</h2>
+
+<table id="changeBook">
+  <tr>
+    <form method="get" action="/form/form">
+          <button class="button edit">Edit</button>
+        </form>
+  </tr>
+  <br>
+    <tr>
+        <form method="post" action="/delete/delete?_method=DELETE">
+          <label for="name" id="name">Search:</label>
+            <input type="text" name="empName"> 
+            <button class="button delete">Delete</button>
+          </form>
+    </tr>
+
+</table>
 
 <table style="width:100%">
   <tbody>
     
       <tr>
-        <th>Room No:</th>
-        <th>Employee Name:</th>
-        <th></th>Employee Email:</th>
-        <th>Employee Phone:</th>
-        <th>Date:</th>
-        <th>Start Time:</th>
-        <th>End Time:</th>
+        <th>Room No</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Employee Phone</th>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
       </tr>
       <% if(data.length){ for(var i=0; i<data.length; i++){%>
       <tr>
@@ -72,17 +98,5 @@ button:hover {
   
 </table>
 
-<table id="changeBook">
-  <tr>
-    <form method="get" action="/form/form">
-          <button class="button edit">Edit</button>
-        </form>
-  </tr>
-    <tr>
-        <form method="post" action="/delete/delete?_method=DELETE">
-            <input type="text" name="empName">
-            <button class="button delete">Delete</button>
-          </form>
-    </tr>
 
-</table>
+

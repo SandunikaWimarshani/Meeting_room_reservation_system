@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 const Book = require('./models/reservation')
 const cors = require('cors')
 const methodoverride = require('method-override')
+const socket = require('socket.io')
 
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -48,6 +49,7 @@ app.use('/form', formRouter)
 app.use('/book', bookRouter)
 app.use('/logout',logoutRouter)
 app.use('/delete', deleteRouter)
+
 
 app.listen(3000, () => console.log('Server started at 3000'));
 
