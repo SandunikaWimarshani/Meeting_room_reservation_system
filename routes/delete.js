@@ -8,8 +8,8 @@ router.get('/delete', (req, res) => {
     res.render('./delete')
 })
 
-router.delete('/delete', (req,res)=> {
-    Book.deleteMany({'empName': req.body.empName}, function(err, success){
+router.get('/deleteBooking', (req,res)=> {
+    Book.deleteMany({'empName': req.query.empName}, function(err, success){
         if(err){
             res.render('./book', {message:err})
         }else{

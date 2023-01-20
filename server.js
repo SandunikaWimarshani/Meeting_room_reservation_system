@@ -25,6 +25,7 @@ const formRouter = require('./routes/form')
 const bookRouter =require('./routes/book')
 const logoutRouter =require('./routes/logout')
 const deleteRouter =require('./routes/delete')
+const updateRouter =require('./routes/update')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -49,6 +50,7 @@ app.use('/form', formRouter)
 app.use('/book', bookRouter)
 app.use('/logout',logoutRouter)
 app.use('/delete', deleteRouter)
+app.use('/update', updateRouter)
 
 
 app.listen(3000, () => console.log('Server started at 3000'));
