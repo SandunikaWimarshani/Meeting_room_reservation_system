@@ -11,4 +11,7 @@ var reservationSchema = mongoose.Schema(
         endTime:String
     });
 
+    reservationSchema.index( { roomNo: 1, startTime: 1 },
+        { unique: true } )   
+
     module.exports = mongoose.model("Reservation", reservationSchema)

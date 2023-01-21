@@ -26,6 +26,7 @@ const bookRouter =require('./routes/book')
 const logoutRouter =require('./routes/logout')
 const deleteRouter =require('./routes/delete')
 const updateRouter =require('./routes/update')
+const chatRouter =require('./routes/chat')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -42,6 +43,7 @@ const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))
 
+
 app.use('/', indexRouter)
 app.use('/adminlogin', adminloginRouter)
 app.use('/userlogin', userloginRouter)
@@ -51,8 +53,48 @@ app.use('/book', bookRouter)
 app.use('/logout',logoutRouter)
 app.use('/delete', deleteRouter)
 app.use('/update', updateRouter)
+app.use('/chat', chatRouter)
 
 
-app.listen(3000, () => console.log('Server started at 3000'));
+/*app.listen(3000, () => console.log('Server started at 3000'));*/
 
+
+
+// App setup
+const PORT = 5000;
+const server = app.listen(PORT, function () {
+  console.log(`Listening on port ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
+});
+
+// Static files
+//app.use(express.static("public"));
+
+// Socket setup
+const io = socket(server);
+
+const activeUsers = new Set();
+
+io.on("connection", function (socket) {
+  console.log("Made socket connection");
+
+  socket.on("new user", function (data) {
+    socket.userId = data;
+    activeUsers.add(data);
+    io.emit("new user", [...activeUsers]);
+  });
+
+  socket.on("disconnect", () => {
+    activeUsers.delete(socket.userId);
+    io.emit("user disconnected", socket.userId);
+  });
+
+  socket.on("chat message", function (data) {
+    io.emit("chat message", data);
+  });
+  
+  socket.on("typing", function (data) {
+    socket.broadcast.emit("typing", data);
+  });
+});
 

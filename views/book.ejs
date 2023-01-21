@@ -14,7 +14,10 @@ body
   color:whitesmoke;
       
 }
-    
+ h2{
+  text-align: center;
+ }  
+  
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -48,21 +51,6 @@ button:hover {
 
 <h2>Reservation Details</h2>
 
-<table id="changeBook">
-  
- 
-    <tr>
-        <form method="post" action="/delete/delete?_method=DELETE">
-          <label for="name" id="name">Search: </label>
-            <input type="text" name="empName"> 
-            <button class="button delete">Delete</button>
-          </form>
-          <form method="get" action="/form/form">
-            <button class="button edit">Edit</button>
-          </form>
-    </tr>
-
-</table>
 
 <table style="width:100%">
   <tbody>
