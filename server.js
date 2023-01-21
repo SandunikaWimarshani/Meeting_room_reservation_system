@@ -9,6 +9,8 @@ const Book = require('./models/reservation')
 const cors = require('cors')
 const methodoverride = require('method-override')
 const socket = require('socket.io')
+const http = require('path')
+
 
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -27,6 +29,7 @@ const logoutRouter =require('./routes/logout')
 const deleteRouter =require('./routes/delete')
 const updateRouter =require('./routes/update')
 const chatRouter =require('./routes/chat')
+const joinChatRouter =require('./routes/joinChat')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -54,11 +57,10 @@ app.use('/logout',logoutRouter)
 app.use('/delete', deleteRouter)
 app.use('/update', updateRouter)
 app.use('/chat', chatRouter)
+app.use('/joinChat', joinChatRouter)
 
 
-/*app.listen(3000, () => console.log('Server started at 3000'));*/
-
-
+app.listen(3000, () => console.log('Server started at 3000'));
 
 // App setup
 const PORT = 5000;
@@ -97,4 +99,5 @@ io.on("connection", function (socket) {
     socket.broadcast.emit("typing", data);
   });
 });
+
 

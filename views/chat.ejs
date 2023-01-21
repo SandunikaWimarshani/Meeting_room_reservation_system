@@ -11,29 +11,86 @@
     background: -webkit-linear-gradient(to right, #155799, #159957); 
     background: linear-gradient(to right, #155799, #159957); 
     color:whitesmoke;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .chat_img {
+    /* The image used */
+    background-image: url("/images/chat.jpeg");
+    min-height: 700px;
+    width: 100%;
+    
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 22px 0;
+    border: none;
+    background: whitesmoke;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: white;
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: #04AA6D;
+    color: black;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
   }
   </style>
+  
+ 
 
-
-<div class="container">
-    <div class="inbox">
-      <div class="inbox__people">
-        <h4>Active users</h4>
-      </div>
-      <div class="inbox__messages">
-        <div class="messages__history"></div>
-        <div class="fallback"></div>
-      </div>
-    </div>
-
-    <form class="message_form">
-      <input type="text" class="message_form__input" placeholder="Type a message" />
-      <button class="message_form__button" type="submit">
-        Enter
-      </button>
-    </form>
+  <div class="chat_img">
+    <br><br><br><br>
+    <form action="/joinChat/joinChat" class="container">
+      <h1>Login</h1>
+  
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+  
+      <label for="room_no"><b>Room No</b></label><br>
+      <input type="text" placeholder="Enter required Room no" name="room_no" required>
+      <form method="get" action="/joinChat/joinChat">
+        <button type="submit" class="btn">Join Chat</button>
+      </form>
+      
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-  <script src="/main.js"></script>
-    
+  
