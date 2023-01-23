@@ -13,7 +13,8 @@ body
   color:whitesmoke;
 }
 
-h2{
+h2
+{
     text-align: center;
 }
 
@@ -63,7 +64,8 @@ h2{
 	background-size:cover;
 }
 
-.button {
+.button 
+{
   background-color: black;
   border: none;
   color: white;
@@ -76,34 +78,36 @@ h2{
   cursor: pointer;
 }
 
-.form {
+.form 
+{                  /* form used for the room details*/ 
     background-color: black;
     width: 100%;
 } 
 
-.form:hover {
+.form:hover 
+{
     opacity: 0.6;
     cursor: pointer;
     border: 2px solid white;
 }
 
-.roomDetails:hover{
+.roomDetails:hover
+{
     background-color: rgb(51, 103, 103);
 }
   
-#selectBook 			
+#selectBook 			/* select button*/
 {
 	margin-left:0px;
 	margin-bottom:10px;
 }
 
-button:hover {
+button:hover 
+{
   opacity: 0.6;
   cursor: pointer;
   border: 2px solid white;
 }
-
-
 
 </style>
 
@@ -227,4 +231,8 @@ button:hover {
 </table>
 
 
+<script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+  </script>
     
