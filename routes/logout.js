@@ -3,6 +3,7 @@ const router = express.Router()
 
 router.get('/logout', (req, res) => {
     res.render('./logout')
+    
 })
 
 
