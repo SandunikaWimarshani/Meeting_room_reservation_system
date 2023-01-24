@@ -64,9 +64,9 @@ app.use('/update', updateRouter)
 server.listen(3000, () => console.log('Server started at 3000'));
 
 io.on('connection', (socket) =>{
-  console.log('new user connected')
+  console.log('user is viewing reservation room list')
   socket.on('disconnect', () => {
-    console.log('user disconnected');
+    console.log('user exited from viewing reservation room list');
   });
 }) ;
   
