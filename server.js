@@ -48,6 +48,7 @@ db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))
 
 
+
 app.use('/', indexRouter)
 app.use('/adminlogin', adminloginRouter)
 app.use('/userlogin', userloginRouter)
@@ -70,4 +71,4 @@ io.on('connection', (socket) =>{
 }) ;
   
 
-  
+module.exports = server
