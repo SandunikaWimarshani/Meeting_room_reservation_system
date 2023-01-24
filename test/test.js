@@ -27,6 +27,10 @@ describe('testing reservation', function() {
         done();
     });
 
+    after(() => {
+        process.exit();
+    })
+
     
     it('should load all reservations', function(done) {
         chai.request(server)
