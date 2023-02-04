@@ -63,6 +63,7 @@ app.use('/update', updateRouter)
 
 server.listen(3000, () => console.log('Server started at 3000'));
 
+
 io.on('connection', (socket) =>{
   console.log('user is viewing reservation room list')
   socket.on('disconnect', () => {
